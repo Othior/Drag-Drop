@@ -20,7 +20,9 @@ function App() {
           <Note id="move" className="grid-item"></Note>
           <Note id="move" className="grid-item"></Note>
           <Note id="move" className="grid-item"></Note>
-          <Note id="move" className="grid-item"></Note>
+          <Note id="move" className="grid-item">
+            <Card id="biter" className="grid-item-active" draggable="true">.</Card> 
+          </Note>
           <Note id="move" className="grid-item">
             <Card id="ok" className="grid-item-active" draggable="true">.</Card> 
           </Note>
