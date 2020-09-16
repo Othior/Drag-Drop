@@ -1,0 +1,28 @@
+.grid-note {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  background: rgb(12, 4, 39);
+  color:  rgb(12, 4, 39);
+  padding: 15rem;
+}
+
+.grid-item{
+  background-color: rgba(70, 70, 70, 0.8);
+  padding: 3rem;
+  text-align: center; 
+}
+
+/* .delete-note{
+  background: brown;
+  padding: 20rem;
+} */
+
+.grid-item-active{
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+}
+  
+  

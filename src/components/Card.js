@@ -1,29 +1,21 @@
-import React, { createRef } from "react"
+import React, { createRef, useState } from "react"
 
 
  function Card(props){
-     const dragStart = e => {
-         
-         const target = e.target;
 
-         e.dataTransfer.setData('card_id',target.id);
+    const drag = (ev) =>{
+        // console.log("id recherche",ev.target.previousElementSibling.id)
 
-         setTimeout(() => {
-             target.style.display = "none";
-         }, 0);
-     }
-
-     const dragOver = e => {
-         e.stopPropagation();
-     }
-    
+        console.log("id recherche",ev.target.parentElement)
+        const element_id = document.getElementById("move");
+        ev.dataTransfer.setData(element_id.id,ev.target.id);
+      }
     return(
         <div
             id = {props.id}
             className = {props.className}
             draggable = {props.draggable}
-            onDragStart = {dragStart}
-            onDragOver = {dragOver}
+            onDragStart = {(ev) => drag(ev)}
         >   
             {props.children}
         </div>
