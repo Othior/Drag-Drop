@@ -1,13 +1,13 @@
-import React, { createRef, useState } from "react"
+import React, { createRef, useRef, useState } from "react"
 
 
  function Card(props){
-
+    
     const drag = (ev) =>{
-        // console.log("id recherche",ev.target.previousElementSibling.id)
+        console.log("drag console : ",ev.target);
 
-        console.log("id recherche",ev.target.parentElement)
         const element_id = document.getElementById("move");
+        
         ev.dataTransfer.setData(element_id.id,ev.target.id);
       }
     return(
